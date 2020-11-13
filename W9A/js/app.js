@@ -1,5 +1,9 @@
-var age = 12;
-var is_subscribed = confirm ("Do you have a subscription? If yes, click ok. If not, click cancel");
+// Assignment W9B
+//  Karen Evans
+// November 12, 2020
+
+var ages = [12, 18, 25];
+var is_subscribed = ["yes", "No", "Yes"];
 
 
 if (age < 18 && is_subscribed == false) {
