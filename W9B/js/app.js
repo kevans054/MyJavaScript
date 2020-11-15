@@ -3,20 +3,25 @@
 // November 12, 2020
 
 var age = [ 12, 18, 25, 30, 54];
-var is_subscribed = ["true", "false", "true", "false", "true"];
-var i = 0;
+var is_subscribed = [false, false, true, false, true];
 
 
-//  while i is less than number of items in the array using counter of iterations
-// while (age[i] && is_subscribed[i]) {
-//         console.log(age[i] + " " + is_subscribed[i]);
-
-//         i++;
-//     }
-
-// while i is less than the number of items in the array based on length of array
-while(i < age.length) {
-    console.log(age[i] + " " + is_subscribed[i]);
-
+for(var i = 0; i < age.length;) {
+    if (age[i] < 18 && is_subscribed[i] == false) {
+        console.log(age[i] + " is too young and you are not subscribed to this site!");
+    }
+    else if (age[i] < 18 && is_subscribed[i] == true) {
+        console.log(age[i]  + " is too young but you are subscribed to this site.");
+    }
+    else if (age[i] >= 18 && is_subscribed[i] == false) {
+        console.log(age[i] + " is permitted but you are not subscribed to this site.");
+    }
+    else if (age[i] >= 18 && is_subscribed[i] == true) {
+        console.log(age[i]  + " is permitted and you are subscribed to this site.");
+    }
+    
+    else {
+        console.log(age[i] + " is the correct age and you are subscribed to this site.");
+    }
     i++;
 }
