@@ -1,3 +1,7 @@
+// Assignment W9C
+//  Karen Evans
+// November 14, 2020
+
 var tweets = [
 'Good morning everyone!',
 'Saturday mornings are for sleeping in.',
