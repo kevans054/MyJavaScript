@@ -28,11 +28,15 @@ for (var i = 0; i < ByTagName.length; i++) {
 //  Question #6.
 var Mybtn = document.createElement("BUTTON");  
 Mybtn.innerHTML = "CLICK ME";                   
-document.body.appendChild(Mybtn);               
+var target = document.querySelector("MyDiv");
+document.body.appendChild(Mybtn).after(target);          
+
+
 
 //  Question #7.
-var MyTextNode = document.createTextNode("Hello World");
-document.body.appendChild(MyTextNode);  
+// var MyTextNode = document.createTextNode("Hello World");
+// var target2 = document.querySelector("ArticleOne");
+// document.body.appendChild(MyTextNode).after(target2);  
 
 //  Question #8
 var Myparent = document.getElementById("ArticleOne");
@@ -41,4 +45,7 @@ Myparent.removeChild(Mychild);
 
 // Question #9
 var Style = document.getElementById("myDIV").classList.add("mystyle");
-console.log('Style');
+
+var remove_style =  document.getElementById("myDIV").classList.remove("mystyle");
+
+var toggle_style =  document.getElementById("myDIV").classList.toggle("myOtherstyle");
