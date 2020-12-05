@@ -6,25 +6,20 @@
 class KanyeWestTweet {
 
     content = ''; //tweet
-    // element = {};
 
     constructor(getQuote) {
 
         this.getNewTweet();
-
     }
 
     //method get a new tweet
     getNewTweet() {
 
-        
-
-        let button = document.querySelector('.get-quote');
+        let button = document.querySelector('.btn');
         button.addEventListener('click', function () {
             
             //creating a new request object 
             let ajax = new XMLHttpRequest();
-            // let self = this;
 
             //define our ajax callback function(i.e. what happens when we send the request)
             ajax.onreadystatechange = function () {
@@ -41,10 +36,13 @@ class KanyeWestTweet {
             //send ajax request
             ajax.send();
         });
-
+        //load a quote when the page loads
         button.click();
     }
 }
 
-let target = document.querySelector('.quote');
+let target = document.querySelector('.text-center');
 let tweet = new KanyeWestTweet();
+
+// const selector = document.querySelector('.yourdiv')
+// selector.classList.add('magictime', 'puffIn')
